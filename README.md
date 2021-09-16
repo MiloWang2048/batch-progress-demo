@@ -2,6 +2,8 @@
 
 This project demos a component `BatchProgress` which can track states of a group of promises.
 
+> This project is available for mobile devices.
+
 ## Getting started
 
 ```sh
