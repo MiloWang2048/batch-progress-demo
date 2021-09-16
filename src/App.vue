@@ -26,7 +26,13 @@
         <v-spacer/>
       </v-container>
 
-      <v-menu left top offset-y activator="#submit" :close-on-content-click="false">
+      <v-menu
+          left
+          top
+          offset-y
+          activator="#submit"
+          :close-on-content-click="false"
+          :close-on-click="!loading">
         <batch-progress :batch-states="batchStates" :tooltip-mapper="myTooltipMapper" @click="onClickPromiseState"/>
       </v-menu>
     </v-main>
@@ -49,6 +55,9 @@ export default {
   }),
   methods: {
     fire() {
+      if (this.loading) {
+        return
+      }
       this.loading = true;
       const batchOps = [...range(this.operationAmount)].map(() => requestApi());
       this.batchStates = batchOps.map(promise => new PromiseState(promise))
