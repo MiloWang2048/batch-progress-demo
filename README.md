@@ -2,6 +2,8 @@
 
 This project demos a component `BatchProgress` which can track states of a group of promises.
 
+Online demo site: https://demo-1258344804.cos-website.ap-nanjing.myqcloud.com
+
 > This project is available for mobile devices.
 
 ## Getting started
