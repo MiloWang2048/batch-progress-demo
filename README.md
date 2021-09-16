@@ -1,24 +1,39 @@
-# batchops-demo
+# Batch-ops-demo
 
-## Project setup
-```
-yarn install
-```
+This project demos a component `BatchProgress` which can track states of a group of promises.
 
-### Compiles and hot-reloads for development
-```
+## Getting started
+
+```sh
+yarn
 yarn serve
 ```
 
-### Compiles and minifies for production
+## Structure
+
+You may want to read [The component doc](src/components/batch-progress/README.md) for `BatchProgress`.
+
 ```
-yarn build
+src
+│  App.vue: Home page.
+│  main.js: Bundle entry.
+│
+├─components
+│  └─batch-progress
+│          BatchProgress.vue: The target component.
+│          PromiseState.js: An internal helper class.
+│          README.md: Component doc.
+│
+├─lib
+│      sdk.js: Exports the mock api.
+│      utils.js: Exports a helper function.
+│
+└─plugins
+        vuetify.js: Configurations for vuetify.
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Dependencies
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- Vue
+- Vuetify
+- FontAwesome
