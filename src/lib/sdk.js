@@ -18,7 +18,7 @@ async function requestApi() {
           message: "累积转账金额超过限制",
         });
       }
-    }, 1000);
+    }, Math.random() * 3 * 1000); // 在0~3秒内完成
   });
 }
 
