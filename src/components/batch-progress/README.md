@@ -7,7 +7,7 @@ It's just a stateless component:
 ```vue
 
 <template>
-  <batch-progress :batch-states="states" :tooltip-mapper="myTooltipMapper" @state-clicked="alert"/>
+  <batch-progress :batch-states="states" :tooltip-mapper="myTooltipMapper"/>
 </template>
 
 <script>
